@@ -1,0 +1,26 @@
+﻿<Window x:Class="Pipe.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pipe.Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="270" Width="220">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Width="200" VerticalAlignment="Center">
+            <Button Content="Connect" Margin="10" x:Name="btn_Connect" Click="btn_Connect_Click"/>
+            <Button Content="Send start" Margin="10,10,10,0" x:Name="btn_sendStart" Click="btn_sendStart_Click"/>
+            <Button Content="Send check" Margin="10,0,10,0" x:Name="btn_sendCheck" Click="btn_sendCheck_Click"/>
+            <Button Content="Send break" Margin="10,10,10,0" x:Name="btn_sendBreak" Click="btn_sendBreak_Click"/>
+            <DockPanel Margin="10,10,10,0">
+                <Button DockPanel.Dock="Right" Content="Send" Padding="5,0" x:Name="btn_sendText" Click="btn_sendText_Click"/>
+                <TextBox x:Name="tb_message"/>
+            </DockPanel>
+            <Button Content="Disconnect" Margin="10,10,10,0" x:Name="btn_Disconnect" Click="btn_Disconnect_Click"/>
+            <TextBlock Margin="10">
+                <Run Text="Received:" />
+                <Run x:Name="run_received" />
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

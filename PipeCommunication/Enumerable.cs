@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PipeCommunication
 {
-    public class Class1
+    public enum ServerState
     {
+        Idle,
+        Working,
+        Success,
+        Failure,
+        Unknown
     }
 }
